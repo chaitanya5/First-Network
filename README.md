@@ -22,7 +22,7 @@ Changes made to official fabric-samples are listed below.
 - `$ export CHANNEL_NAME=mychannel`
 - `$ configtxgen -profile TwoOrgsChannel -outputCreateChannelTx ./channel-artifacts/channel.tx -channelID $CHANNEL_NAME`
 
-c) Command to generate the transaction for the Anchor Peer in each Peer Organizations
+### c) Command to generate the transaction for the Anchor Peer in each Peer Organizations
 
 - `$ configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/Org1MSPanchors.tx -channelID $CHANNEL_NAME -asOrg Org1MSP`
 - `$ configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/Org2MSPanchors.tx -channelID $CHANNEL_NAME -asOrg Org2MSP`
@@ -56,7 +56,7 @@ Since all the environment variables are by default set to Peer0.Org1 in the CLI 
   - `# . ./changeEnv.sh`
   - `# peer channel join -b mychannel.block`
 
-c) Update the Anchor Peer on each organization
+### c) Update the Anchor Peer on each organization
 
 - For peer0.org1 (the default node),
   - `# . ./changeEnv.sh`
