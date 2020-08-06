@@ -90,11 +90,11 @@ a) Invoke the chaincode (equivalent to issue a transaction) from peer0.org1.We n
 $ . ./changeEnv.sh
 $ peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile $ORDERER_CA -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses peer0.org2.example.com:9051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"Args":["invoke","a","b","10"]}'
 
-b) Install chaincode on peer1.org2,
+b) Install chaincode on peer1.org2
 $ . ./changeEnv.sh
 $ peer chaincode install -n mycc -v 1.0 -p github.com/chaincode/chaincode_example02/go/
 
-c) Query the value a from peer1.org2,
+c) Query the value a from peer1.org2
 $ peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["query","a"]}'
 
 ## STEP 7 Tear down all the setup
